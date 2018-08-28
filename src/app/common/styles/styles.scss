@@ -1,0 +1,31 @@
+@font-face {
+  font-family: Exo20-Thin;
+  src: url(../fonts/Exo2.0-Thin.otf);
+}
+
+body {
+  background-image: url(../images/ground-big.png);
+  margin: 0;
+}
+
+@mixin display-flex {
+  display: flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-flex;
+}
+
+@mixin flex-direction($direction) {
+  flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  -webkit-flex-direction: $direction;
+}
+
+@mixin flex-align-items($arg) {
+  align-items: $arg;
+  -webkit-align-items: $arg;
+}
+
+@import "~src/app/common/styles/app.component.scss";
+@import "~src/app/common/styles/package.component.scss";
