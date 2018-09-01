@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: url(../images/ground-big.png);
+  background-image: url(../images/ground.png);
   margin: 0;
 }
 
@@ -25,6 +25,11 @@ body {
 @mixin flex-align-items($arg) {
   align-items: $arg;
   -webkit-align-items: $arg;
+}
+
+@mixin flex-justify-content($arg) {
+  justify-content: $arg;
+  -webkit-justify-content: $arg;
 }
 
 @import "~src/app/common/styles/app.component.scss";
