@@ -22,14 +22,27 @@ body {
   -webkit-flex-direction: $direction;
 }
 
-@mixin flex-align-items($arg) {
+@mixin align-items($arg) {
   align-items: $arg;
   -webkit-align-items: $arg;
 }
 
-@mixin flex-justify-content($arg) {
+@mixin justify-content($arg) {
   justify-content: $arg;
   -webkit-justify-content: $arg;
+}
+
+@mixin flex-wrap($arg) {
+  flex-wrap: $arg;
+  -ms-flex-wrap: $arg;
+  -webkit-flex-wrap: $arg;
+}
+
+@mixin transform($arg) {
+  transform: $arg;
+  -ms-transform: $arg;
+  -webkit-transform: $arg;
+  -o-transform: $arg;
 }
 
 @import "~src/app/common/styles/app.component.scss";

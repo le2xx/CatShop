@@ -1,6 +1,7 @@
 .package {
-  width: 320px;
-  height: 509px;
+  width: 328px;
+  height: 517px;
+  margin: 0 5px 10px 5px;
 }
 
 .package-property {
@@ -67,6 +68,16 @@
     right: -232px;
     margin: 0;
 
+  }
+
+  &__up-corner {
+    width: 4px;
+    height: 70px;
+    background-color: #1698d9;
+    position: relative;
+    bottom: 576px;
+    left: 24px;
+    @include transform(rotate(45deg));
   }
 
   &__mass {
