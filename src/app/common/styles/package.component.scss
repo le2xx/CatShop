@@ -7,7 +7,7 @@
   width: 320px;
   height: 480px;
   border: 4px solid #1698d9;
-  border-radius: 12px ;
+  border-radius: 14px ;
   background-color: #f2f2f2;
 
   &__items {
@@ -24,19 +24,28 @@
       color: #000000;
       font-size: 48px;
       font-weight: 700;
+      margin: 6px 0 0 48px;
     }
 
     &_tree {
       color: #000000;
       font-size: 24px;
       font-weight: 700;
+      margin: 0 0 0 48px;
     }
 
     &_four {
       color: #666666;
       font-size: 14px;
       line-height: 16px;
-      font-weight: 700;
+      margin: 15px 0 0 48px;
+    }
+
+    &_five {
+      color: #666666;
+      font-size: 14px;
+      line-height: 16px;
+      margin: 0 0 0 48px;
     }
   }
 
@@ -44,7 +53,7 @@
     background-image: url(../images/cat.png);
     width: 314px;
     height: 272px;
-    top: 68px;
+    top: 31px;
     position: relative;
   }
 
@@ -57,5 +66,29 @@
     bottom: 96px;
     right: -232px;
     margin: 0;
+
+  }
+
+  &__mass {
+    color: #ffffff;
+    font-family: "Trebuchet MS", serif;
+    font-size: 42px;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0 0 0;
+
+    &_kg {
+      font-size: 21px;
+      padding: 0;
+    }
+  }
+
+  &__bottom {
+    color: #ffffff;
+    font-size: 13px;
+    font-family: "Trebuchet MS", serif;
+    position: relative;
+    top: -65px;
+    text-align: center;
   }
 }
