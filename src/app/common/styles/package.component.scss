@@ -1,45 +1,39 @@
 .package {
-  width: 328px;
-  height: 517px;
-  margin: 0 5px 10px 5px;
+  width: 320px;
+  height: 509px;
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+
+.package-border {
+  width: 312px;
+  height: 480px;
+  margin: 0;
+  padding: 4px;
+  border-radius: 12px;
+  position: relative;
+  background: linear-gradient(135deg, transparent 40px, #1698d9 0);
+}
+
+.package-content {
+  width: 312px;
+  height: 480px;
+  border-radius: 10px;
+  position: relative;
+  background: linear-gradient(135deg, transparent 40px, #f2f2f2 0);
 }
 
 .package-property {
-  width: 320px;
+  width: 312px;
   height: 480px;
-  border-right: 4px solid #1698d9;
-  border-bottom: 4px solid #1698d9;
-  border-radius: 14px;
-  position: relative;
-  background: linear-gradient(135deg, transparent 40px, #f2f2f2 0);
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: 54px;
-    height: 430px;
-    width: 100px;
-    border-left: 4px solid #1698d9;
-    border-radius: 0 0 0 12px;
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 54px;
-    height: 100px;
-    width: 270px;
-    border-top: 4px solid #1698d9;
-    border-radius: 0 12px 0 0;
-  }
 
   &__items {
     font-family: "Trebuchet MS", serif;
     margin: 0 0 0 48px;
+    color: #666666;
 
     &_one {
-      color: #666666;
+
       font-size: 16px;
       margin: 0 0 0 48px;
       padding: 21px 0 0 0;
@@ -60,14 +54,14 @@
     }
 
     &_four {
-      color: #666666;
+
       font-size: 14px;
       line-height: 16px;
       margin: 15px 0 0 48px;
     }
 
     &_five {
-      color: #666666;
+
       font-size: 14px;
       line-height: 16px;
       margin: 0 0 0 48px;
@@ -76,11 +70,10 @@
 
   &__image {
     background-image: url(../images/cat.png);
-    width: 314px;
+    width: 312px;
     height: 272px;
-    top: -276px;
-    left: 4px;
-    position: relative;
+    bottom: 0;
+    position: absolute;
   }
 
   &__oval {
@@ -88,21 +81,9 @@
     height: 80px;
     background-color: #1698d9;
     border-radius: 50%;
-    position: relative;
-    bottom: 370px;
-    right: -228px;
-    margin: 0;
-
-  }
-
-  &__up-corner {
-    @include transform(rotate(45deg));
-    width: 4px;
-    height: 76px;
-    background-color: #1698d9;
-    position: relative;
-    bottom: 845px;
-    left: 26px;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
   }
 
   &__mass {
@@ -124,8 +105,9 @@
     color: #ffffff;
     font-size: 13px;
     font-family: "Trebuchet MS", serif;
-    position: relative;
-    bottom: 410px;
+    position: absolute;
+    bottom: -24px;
+    width: 100%;
     text-align: center;
   }
 }
