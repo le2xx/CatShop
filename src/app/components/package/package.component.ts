@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {Package} from '../../common/interfaces/package';
 
 @Component({
   selector: 'app-package',
@@ -8,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class PackageComponent implements OnInit {
 
   constructor() { }
+
+  @Input() package: Package;
+  presents: string[] = ['мышей', 'мышь', 'мыши', 'мыши', 'мыши', 'мышей'];
 
   ngOnInit() {
   }

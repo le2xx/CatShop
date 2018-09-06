@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+// @ts-ignore
+import json from '../app/common/json/api.json';
+import {Package} from './common/interfaces/package';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  packages: Package[] = json.packages;
 }

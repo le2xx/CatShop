@@ -1,6 +1,4 @@
 <div class="head">Ты сегодня покормил кота?</div>
 <div class="content">
-  <app-package></app-package>
-  <app-package></app-package>
-  <app-package></app-package>
+  <app-package *ngFor="let package of packages" [package]="package"></app-package>
 </div>
