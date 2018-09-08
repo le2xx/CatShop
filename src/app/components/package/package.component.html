@@ -1,7 +1,7 @@
 <div class="package">
-  <div class="package-border">
+  <div [ngClass]="{'package-border': true, 'package-border_selected': selected, 'package-border_disabled': package.disabled}">
     <div class="package-content">
-      <div class="package-content">
+      <div [ngClass]="{'package-content': true, 'package-content_disabled': package.disabled}" (click)="checkPackage()">
         <div class="package-property">
           <div class="package-property__items package-property__items_one">Сказочное заморское яство</div>
           <div class="package-property__items package-property__items_two">{{ package.name }}</div>
@@ -13,7 +13,8 @@
             package.present }} {{ presents[package.present] }} в подарок
           </div>
           <div class="package-property__image"></div>
-          <div class="package-property__oval">
+          <div
+            [ngClass]="{'package-property__oval': true, 'package-property__oval_selected': selected, 'package-property__oval_disabled': package.disabled}">
             <div class="package-property__mass">{{ package.mass }}</div>
             <div class="package-property__mass package-property__mass_kg">кг</div>
           </div>

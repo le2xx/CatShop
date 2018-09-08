@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {Package} from '../../common/interfaces/package';
 
 @Component({
@@ -8,12 +8,19 @@ import {Package} from '../../common/interfaces/package';
 })
 export class PackageComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   @Input() package: Package;
   presents: string[] = ['мышей', 'мышь', 'мыши', 'мыши', 'мыши', 'мышей'];
+  selected  = false;
 
   ngOnInit() {
+  }
+
+  checkPackage() {
+    this.selected = !this.selected;
+    console.log(this.selected);
   }
 
 }
