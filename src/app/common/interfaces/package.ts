@@ -4,7 +4,7 @@ export interface Package {
   composition: string;
   description: string;
   amount: number;
-  present: number;
+  present: { num: string, description: string };
   mass: string;
   disabled: boolean;
 }

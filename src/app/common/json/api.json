@@ -6,7 +6,7 @@
       "composition": "с фуа-гра",
       "description": "Печень утки разварная с артишоками",
       "amount": 10,
-      "present": 1,
+      "present": { "num": "", "description": "мышь в подарок" },
       "mass": "0,5",
       "disabled": false
     },
@@ -16,7 +16,7 @@
       "composition": "с рыбой",
       "description": "Головы щучьи с чесноком да свежайшая семгушка",
       "amount": 40,
-      "present": 2,
+      "present": { "num": "2", "description": "мыши в подарок" },
       "mass": "2",
       "disabled": false
     },
@@ -26,7 +26,7 @@
       "composition": "с курой",
       "description": "Филе из цыплят с трюфелями в бульоне",
       "amount": 100,
-      "present": 5,
+      "present": { "num": "5", "description": "мышей в подарок заказчик доволен" },
       "mass": "5",
       "disabled": true
     }

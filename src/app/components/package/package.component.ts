@@ -12,15 +12,21 @@ export class PackageComponent implements OnInit {
   }
 
   @Input() package: Package;
-  presents: string[] = ['мышей', 'мышь', 'мыши', 'мыши', 'мыши', 'мышей'];
   selected  = false;
+  hovered = false;
 
   ngOnInit() {
   }
 
   checkPackage() {
-    this.selected = !this.selected;
-    console.log(this.selected);
+    if (!this.package.disabled) {
+      this.selected = !this.selected;
+      this.hovered = false;
+    }
+  }
+
+  hover() {
+    this.hovered = !this.hovered;
   }
 
 }

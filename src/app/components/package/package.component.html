@@ -1,30 +1,40 @@
 <div class="package">
-  <div [ngClass]="{'package-border': true, 'package-border_selected': selected, 'package-border_disabled': package.disabled}">
+  <div [ngClass]="{'package-border': true,
+    'package-border_default-hover': hovered && !selected,
+    'package-border_selected': !hovered && selected,
+    'package-border_selected-hover': hovered && selected,
+    'package-border_disabled': package.disabled}">
     <div class="package-content">
-      <div [ngClass]="{'package-content': true, 'package-content_disabled': package.disabled}" (click)="checkPackage()">
-        <div class="package-property">
-          <div class="package-property__items package-property__items_one">Сказочное заморское яство</div>
-          <div class="package-property__items package-property__items_two">{{ package.name }}</div>
-          <div class="package-property__items package-property__items_tree">{{ package.composition }}</div>
-          <div class="package-property__items package-property__items_four"><span style="font-weight: 700">{{ package.amount }}</span>
-            порций
-          </div>
-          <div class="package-property__items package-property__items_five">{{ package.present === 1 ? '' :
-            package.present }} {{ presents[package.present] }} в подарок
-          </div>
-          <div class="package-property__image"></div>
-          <div
-            [ngClass]="{'package-property__oval': true, 'package-property__oval_selected': selected, 'package-property__oval_disabled': package.disabled}">
-            <div class="package-property__mass">{{ package.mass }}</div>
-            <div class="package-property__mass package-property__mass_kg">кг</div>
-          </div>
-          <div *ngIf="!package.disabled" class="package-property__bottom">Чего сидишь? Порадуй котэ, <span
-            style="font-weight: 700; color: #1698d9">купи.</span></div>
-          <div *ngIf="package.disabled" class="package-property__bottom package-property__bottom_disabled">Печалька, {{
-            package.composition }} закончился.
-          </div>
+      <div [ngClass]="{'package-content': true, 'package-content_disabled': package.disabled}" (mouseout)="hover()"
+           (mouseover)="hover()" (click)="checkPackage()">
+        <div class="package-property__items package-property__items_head" *ngIf="!hovered || !selected">Сказочное
+          заморское яство
+        </div>
+        <div class="package-property__items package-property__items_head-hover" *ngIf="hovered && selected">Котэ не
+          одобряет?
+        </div>
+        <div class="package-property__items package-property__items_name">{{ package.name }}</div>
+        <div class="package-property__items package-property__items_composition">{{ package.composition }}</div>
+        <div class="package-property__items package-property__items_amount"><span style="font-weight: 700">{{ package.amount }}</span>
+          порций<br><span style="font-weight: 700">{{ package.present.num }}</span> {{ package.present.description }}
+        </div>
+        <div class="package-property__image"></div>
+        <div
+          [ngClass]="{'package-property__oval': true,
+              'package-property__oval_default-hover': hovered && !selected,
+              'package-property__oval_selected': !hovered && selected,
+              'package-property__oval_selected-hover': hovered && selected,
+              'package-property__oval_disabled': package.disabled}">
+          <div class="package-property__mass">{{ package.mass }}</div>
+          <div class="package-property__mass package-property__mass_kg">кг</div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="package-property__bottom" *ngIf="!package.disabled && !selected">Чего сидишь? Порадуй котэ, <span
+    style="font-weight: 700; color: #1698d9" (click)="checkPackage()">купи.</span></div>
+  <div class="package-property__bottom" *ngIf="!package.disabled && selected">{{ package.description }}</div>
+  <div class="package-property__bottom package-property__bottom_disabled" *ngIf="package.disabled">Печалька, {{
+    package.composition }} закончился.
   </div>
 </div>
