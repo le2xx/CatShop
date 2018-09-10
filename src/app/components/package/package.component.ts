@@ -29,4 +29,7 @@ export class PackageComponent implements OnInit {
     this.hovered = !this.hovered;
   }
 
+  get itemsHead() {
+    return this.hovered && this.selected ? 'Котэ не одобряет?' : 'Сказочное заморское яство';
+  }
 }

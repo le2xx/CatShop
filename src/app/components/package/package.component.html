@@ -7,15 +7,14 @@
     <div class="package-content">
       <div [ngClass]="{'package-content': true, 'package-content_disabled': package.disabled}" (mouseout)="hover()"
            (mouseover)="hover()" (click)="checkPackage()">
-        <div class="package-property__items package-property__items_head" *ngIf="!hovered || !selected">Сказочное
-          заморское яство
-        </div>
-        <div class="package-property__items package-property__items_head-hover" *ngIf="hovered && selected">Котэ не
-          одобряет?
+        <div [ngClass]="{'package-property__items': true,
+          'package-property__items_head': !hovered || !selected,
+          'package-property__items_head-hover': hovered && selected}">{{ itemsHead }}
         </div>
         <div class="package-property__items package-property__items_name">{{ package.name }}</div>
         <div class="package-property__items package-property__items_composition">{{ package.composition }}</div>
-        <div class="package-property__items package-property__items_amount"><span style="font-weight: 700">{{ package.amount }}</span>
+        <div class="package-property__items package-property__items_amount">
+          <span style="font-weight: 700">{{ package.amount }}</span>
           порций<br><span style="font-weight: 700">{{ package.present.num }}</span> {{ package.present.description }}
         </div>
         <div class="package-property__image"></div>
