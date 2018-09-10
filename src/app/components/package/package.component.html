@@ -18,8 +18,7 @@
           порций<br><span style="font-weight: 700">{{ package.present.num }}</span> {{ package.present.description }}
         </div>
         <div class="package-property__image"></div>
-        <div
-          [ngClass]="{'package-property__oval': true,
+        <div [ngClass]="{'package-property__oval': true,
               'package-property__oval_default-hover': hovered && !selected,
               'package-property__oval_selected': !hovered && selected,
               'package-property__oval_selected-hover': hovered && selected,
@@ -29,11 +28,11 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="package-property__bottom" *ngIf="!package.disabled && !selected">Чего сидишь? Порадуй котэ, <span
-    style="font-weight: 700; color: #1698d9" (click)="checkPackage()">купи.</span></div>
-  <div class="package-property__bottom" *ngIf="!package.disabled && selected">{{ package.description }}</div>
-  <div class="package-property__bottom package-property__bottom_disabled" *ngIf="package.disabled">Печалька, {{
-    package.composition }} закончился.
+      <div class="package-property__bottom" *ngIf="!package.disabled && !selected">Чего сидишь? Порадуй котэ, <span
+              style="font-weight: 700; color: #1698d9" (click)="checkPackage()">купи.</span></div>
+      <div class="package-property__bottom" *ngIf="!package.disabled && selected">{{ package.description }}</div>
+      <div class="package-property__bottom package-property__bottom_disabled" *ngIf="package.disabled">Печалька, {{
+          package.composition }} закончился.
+      </div>
   </div>
 </div>
