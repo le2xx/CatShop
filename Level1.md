@@ -72,10 +72,11 @@
 * Операционная система UNIX (Андрей Робачевский, Сергей Немнюгин, Ольга Стесик)
 
 Сайты:
+* https://google.com
 * https://developer.mozilla.org
 * https://toster.ru
 * https://hexlet.io
-
-
+* https://udemy.com/
+* http://eng-word.ru/
 
 ---
