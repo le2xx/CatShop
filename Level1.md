@@ -72,9 +72,9 @@
 * Операционная система UNIX (Андрей Робачевский, Сергей Немнюгин, Ольга Стесик)
 
 Сайты:
-https://developer.mozilla.org
-https://toster.ru
-https://ru.hexlet.io
+* https://developer.mozilla.org
+* https://toster.ru
+* https://hexlet.io
 
 
 
