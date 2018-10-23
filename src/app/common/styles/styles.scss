@@ -39,14 +39,14 @@
   font-family: 'Exo20-Thin';
   font-style: normal;
   font-weight: normal;
-  src: url(../fonts/Exo2.0-Thin.ttf) format('truetype');
+  src: url(../../../assets/fonts/Exo2.0-Thin.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Trebuchet MS';
   font-style: normal;
   font-weight: normal;
-  src: url(../fonts/Trebuchet-MS.ttf) format('truetype');
+  src: url(../../../assets/fonts/Trebuchet-MS.ttf) format('truetype');
 }
 
 html {
@@ -54,7 +54,7 @@ html {
 }
 
 body {
-  background-image: url(../images/ground.png);
+  background-image: url(../../../assets/images/ground.png);
   margin: 0;
 
   &:before {

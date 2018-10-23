@@ -9,7 +9,7 @@
            (mouseover)="hover()" (click)="checkPackage()">
         <div [ngClass]="{'package-property__items': true,
           'package-property__items_head': !hovered || !selected,
-          'package-property__items_head-hover': hovered && selected}">{{ itemsHead }}
+          'package-property__items_head-hover': hovered && selected}">{{ hovered && selected ? 'Котэ не одобряет?' : 'Сказочное заморское яство' }}
         </div>
         <div class="package-property__items package-property__items_name">{{ package.name }}</div>
         <div class="package-property__items package-property__items_composition">{{ package.composition }}</div>

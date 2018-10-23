@@ -1,34 +1,42 @@
-{
-  "packages": [
-    {
-      "id": 1,
-      "name": "Нямушка",
-      "composition": "с фуа-гра",
-      "description": "Печень утки разварная с артишоками",
-      "amount": 10,
-      "present": { "num": "", "description": "мышь в подарок" },
-      "mass": "0,5",
-      "disabled": false
+[
+  {
+    "id": 1,
+    "name": "Нямушка",
+    "composition": "с фуа-гра",
+    "description": "Печень утки разварная с артишоками",
+    "amount": 10,
+    "present": {
+      "num": "",
+      "description": "мышь в подарок"
     },
-    {
-      "id": 2,
-      "name": "Нямушка",
-      "composition": "с рыбой",
-      "description": "Головы щучьи с чесноком да свежайшая семгушка",
-      "amount": 40,
-      "present": { "num": "2", "description": "мыши в подарок" },
-      "mass": "2",
-      "disabled": false
+    "mass": "0,5",
+    "disabled": false
+  },
+  {
+    "id": 2,
+    "name": "Нямушка",
+    "composition": "с рыбой",
+    "description": "Головы щучьи с чесноком да свежайшая семгушка",
+    "amount": 40,
+    "present": {
+      "num": "2",
+      "description": "мыши в подарок"
     },
-    {
-      "id": 3,
-      "name": "Нямушка",
-      "composition": "с курой",
-      "description": "Филе из цыплят с трюфелями в бульоне",
-      "amount": 100,
-      "present": { "num": "5", "description": "мышей в подарок заказчик доволен" },
-      "mass": "5",
-      "disabled": true
-    }
-  ]
-}
+    "mass": "2",
+    "disabled": false
+  },
+  {
+    "id": 3,
+    "name": "Нямушка",
+    "composition": "с курой",
+    "description": "Филе из цыплят с трюфелями в бульоне",
+    "amount": 100,
+    "present": {
+      "num": "5",
+      "description": "мышей в подарок заказчик доволен"
+    },
+    "mass": "5",
+    "disabled": true
+  }
+]
+
