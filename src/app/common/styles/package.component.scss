@@ -57,13 +57,13 @@
       font-size: 16px;
       margin: 0 0 0 48px;
       padding: 21px 0 0 0;
+    }
 
-      &-hover {
-        color: #e62e7a;
-        font-size: 16px;
-        margin: 0 0 0 48px;
-        padding: 21px 0 0 0;
-      }
+    &_head-hovered {
+      color: #e62e7a;
+      font-size: 16px;
+      margin: 0 0 0 48px;
+      padding: 21px 0 0 0;
     }
 
     &_name {
@@ -85,6 +85,9 @@
       line-height: 16px;
       margin: 15px 0 0 48px;
       width: 127px;
+    }
+    &_number-amount {
+      font-weight: 700;
     }
   }
 
@@ -148,5 +151,10 @@
     &_disabled {
       color: #ffff66;
     }
+  }
+
+  &__bottom-buy {
+    color: #1698d9;
+    font-weight: 700;
   }
 }

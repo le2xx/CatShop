@@ -9,13 +9,15 @@
            (mouseover)="hover()" (click)="checkPackage()">
         <div [ngClass]="{'package-property__items': true,
           'package-property__items_head': !hovered || !selected,
-          'package-property__items_head-hover': hovered && selected}">{{ hovered && selected ? 'Котэ не одобряет?' : 'Сказочное заморское яство' }}
+          'package-property__items_head-hovered': hovered && selected}">{{ hovered && selected ? 'Котэ не одобряет?' :
+          'Сказочное заморское яство' }}
         </div>
         <div class="package-property__items package-property__items_name">{{ package.name }}</div>
         <div class="package-property__items package-property__items_composition">{{ package.composition }}</div>
         <div class="package-property__items package-property__items_amount">
-          <span style="font-weight: 700">{{ package.amount }}</span>
-          порций<br><span style="font-weight: 700">{{ package.present.num }}</span> {{ package.present.description }}
+          <span class="package-property__items_number-amount">{{ package.amount }}</span>
+          порций<br><span class="package-property__items_number-amount">{{ package.present.num }}</span> {{
+          package.present.description }}
         </div>
         <div class="package-property__image"></div>
         <div [ngClass]="{'package-property__oval': true,
@@ -28,11 +30,11 @@
         </div>
       </div>
     </div>
-      <div class="package-property__bottom" *ngIf="!package.disabled && !selected">Чего сидишь? Порадуй котэ, <span
-              style="font-weight: 700; color: #1698d9" (click)="checkPackage()">купи.</span></div>
-      <div class="package-property__bottom" *ngIf="!package.disabled && selected">{{ package.description }}</div>
-      <div class="package-property__bottom package-property__bottom_disabled" *ngIf="package.disabled">Печалька, {{
-          package.composition }} закончился.
-      </div>
+    <div class="package-property__bottom" *ngIf="!package.disabled && !selected">Чего сидишь? Порадуй котэ, <span
+      class="package-property__bottom-buy" (click)="checkPackage()">купи.</span></div>
+    <div class="package-property__bottom" *ngIf="!package.disabled && selected">{{ package.description }}</div>
+    <div class="package-property__bottom package-property__bottom_disabled" *ngIf="package.disabled">Печалька, {{
+      package.composition }} закончился.
+    </div>
   </div>
 </div>
