@@ -13,6 +13,7 @@
 ```bash
 git clone https://github.com/le2xx/CatShop.git
 cd CatShop
+npm install -g @angular/cli
 npm i
 ng serve
 http://localhost:4200/
